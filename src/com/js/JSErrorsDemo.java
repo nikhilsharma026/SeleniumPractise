@@ -36,7 +36,7 @@ public class JSErrorsDemo {
 		driver.quit();
 	}
 	
-	
+
 	@Test
 	public void yifySite() {
 		driver.get("https://yts.am/browse-movies");
@@ -52,12 +52,8 @@ public class JSErrorsDemo {
 			
 			System.out.println(new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage());
 				
-				}
-			
-			
+				}		
 			
 		}
-	
-	
 	
 }
