@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.logging.LogEntries;
@@ -29,8 +28,6 @@ public class JSErrorsDemo {
 	logging.enable(LogType.BROWSER, Level.ALL);
 	cap.setCapability(CapabilityType.LOGGING_PREFS, logging);
 	driver = new FirefoxDriver(cap);
-	 logs= Logger.getLogger("JSErrorsDemo");
-	PropertyConfigurator.configure("log4j.properties");
 	
 	}
 
@@ -52,9 +49,8 @@ public class JSErrorsDemo {
 		
 		
 		for(LogEntry entry : entries) {
-			logs.info(new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage());
 			
-			//System.out.println(new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage());
+			System.out.println(new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage());
 				
 				}
 			
